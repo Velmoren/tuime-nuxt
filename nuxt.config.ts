@@ -7,5 +7,22 @@ export default defineNuxtConfig({
     '@nuxt/a11y',
     '@nuxt/eslint',
     '@nuxt/image'
-  ]
+  ],
+
+  css: [],
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          quietDeps: true,
+          silenceDeprecations: ['import'],
+          additionalData: `
+            @use "~/shared/assets/styles/_variables.scss" as *;
+            @use "~/shared/assets/styles/_mixins.scss" as *;
+          `
+        }
+      }
+    }
+  }
 })
