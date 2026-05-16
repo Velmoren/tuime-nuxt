@@ -6,7 +6,7 @@
 </template>
 
 <style lang="scss">
-@use "bootstrap/dist/css/bootstrap.min.css";
+// @use "bootstrap/dist/css/bootstrap.min.css";
 // Наш единственный глобальный импорт стилей из слоя Shared
 @use "~/shared/assets/styles/main.scss";
 
