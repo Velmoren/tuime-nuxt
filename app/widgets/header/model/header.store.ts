@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { NavItem } from './header.types'
+import type { NavItem, Action } from './header.types'
 
 export const useHeaderStore = defineStore('widget/header', () => {
   const isMobileMenuOpen = ref(false)
@@ -78,8 +78,38 @@ export const useHeaderStore = defineStore('widget/header', () => {
     { title: 'Contact', to: '/contact' }
   ])
 
+  const actionsConfig = ref<Action[]>([
+    {
+      name: 'search',
+      icon: 'pe-7s-search',
+      offcanvas: 'AsideOffcanvasSearch'
+    },
+    {
+      name: 'account',
+      icon: 'pe-7s-users',
+      to: '/account-login'
+    },
+    {
+      name: 'wishlist',
+      icon: 'pe-7s-like',
+      to: '/shop-wishlist'
+    },
+    {
+      name: 'cart',
+      icon: 'pe-7s-shopbag',
+      count: 2,
+      offcanvas: 'AsideOffcanvasCart'
+    },
+    {
+      name: 'menu',
+      icon: 'pe-7s-menu',
+      offcanvas: 'AsideOffcanvasMenu'
+    }
+  ])
+
   return {
     menuConfig,
+    actionsConfig,
     isMobileMenuOpen
   }
 })

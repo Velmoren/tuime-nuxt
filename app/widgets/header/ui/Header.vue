@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeaderMenu from './HeaderMenu.vue'
+import HeaderActions from './HeaderActions.vue'
 </script>
 
 <template>
@@ -20,34 +21,7 @@ import HeaderMenu from './HeaderMenu.vue'
             </div>
 
             <div class="header-align-end">
-              <div class="header-action-area">
-                <div class="shopping-search">
-                  <button class="shopping-search-btn" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#AsideOffcanvasSearch" aria-controls="AsideOffcanvasSearch"><i
-                      class="pe-7s-search icon"></i></button>
-                </div>
-                <div class="shopping-account">
-                  <a class="shopping-account-btn" href="account-login.html">
-                    <i class="pe-7s-users icon"></i>
-                  </a>
-                </div>
-                <div class="shopping-wishlist">
-                  <a class="shopping-wishlist-btn" href="shop-wishlist.html">
-                    <i class="pe-7s-like icon"></i>
-                  </a>
-                </div>
-                <div class="shopping-cart">
-                  <button class="shopping-cart-btn" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#AsideOffcanvasCart" aria-controls="AsideOffcanvasCart">
-                    <i class="pe-7s-shopbag icon"></i>
-                    <sup class="shop-count">2</sup>
-                  </button>
-                </div>
-                <button class="btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasMenu"
-                  aria-controls="AsideOffcanvasMenu">
-                  <i class="pe-7s-menu"></i>
-                </button>
-              </div>
+              <HeaderActions />
             </div>
           </div>
         </div>
@@ -153,9 +127,6 @@ import HeaderMenu from './HeaderMenu.vue'
   @media #{$md-device} {
     display: none;
   }
-
-  // Заметка: Стили для .main-menu вынесены в отдельный компонент MainMenu.vue
-  // Так как стили здесь scoped, они не влияли на элементы внутри MainMenu.vue
 }
 
 // Logo Style
@@ -176,94 +147,6 @@ import HeaderMenu from './HeaderMenu.vue'
 
   .logo-light {
     display: none;
-  }
-}
-
-// Header Action Style
-.header-action-area {
-  align-items: center;
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  top: 1px;
-
-  [class*="shopping-"] {
-    height: 42px;
-  }
-
-  .shopping {
-    &-search {
-      margin-right: 12px;
-
-      @media #{$xs-device} {
-        margin-right: 8px;
-      }
-
-      &-btn {
-        @include action-btn(25px, 22px, 1px);
-      }
-    }
-
-    &-account {
-      margin-right: 15px;
-
-      @media #{$xs-device} {
-        margin-right: 5px;
-      }
-
-      &-btn {
-        @include action-btn(29px, 25px, -2px);
-      }
-    }
-
-    &-wishlist {
-      margin-right: 11px;
-
-      @media #{$xs-device} {
-        margin-right: 6px;
-      }
-
-      &-btn {
-        @include action-btn(27px, 24px, 0);
-      }
-    }
-
-    &-cart {
-      &-btn {
-        @include action-btn(26px, 24px, 0);
-        padding: 0 8px 0 0;
-
-        .shop-count {
-          background-color: $theme-color2;
-          color: $black;
-          font-size: 12px;
-          font-weight: $font-weight-bold;
-          height: 20px;
-          width: 20px;
-          position: absolute;
-          display: inline-block;
-          line-height: 20px;
-          text-align: center;
-          border-radius: 50%;
-          right: 0;
-          top: 0;
-        }
-      }
-    }
-  }
-
-  .btn-menu {
-    @include action-btn(28px, 26px, 1px);
-    display: none;
-    margin-left: 8px;
-
-    @media #{$md-device} {
-      display: block;
-    }
-
-    @media #{$xs-device} {
-      margin-left: 4px;
-    }
   }
 }
 

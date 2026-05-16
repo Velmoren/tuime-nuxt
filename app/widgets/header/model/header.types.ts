@@ -14,3 +14,11 @@ export interface NavItem {
   submenu?: SubItem[]
   columns?: MegaColumn[] // Совпадает с вашим конфигом
 }
+
+export interface Action {
+  name: string
+  icon: string
+  to?: string
+  count?: number
+  offcanvas?: string
+}
