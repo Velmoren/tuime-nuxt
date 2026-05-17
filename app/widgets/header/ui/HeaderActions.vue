@@ -11,14 +11,14 @@ const headerStore = useHeaderStore()
       v-for="action in headerStore.actionsConfig"
       :key="action.name"
       v-bind="action"
-      :data-bs-toggle="action.offcanvas ? 'offcanvas' : undefined"
-      :data-bs-target="action.offcanvas ? `#${action.offcanvas}` : undefined"
-      :aria-controls="action.offcanvas"
     />
   </div>
 </template>
 
 <style lang="scss" scoped>
+      // :data-bs-toggle="action.offcanvas ? 'offcanvas' : undefined"
+      // :data-bs-target="action.offcanvas ? `#${action.offcanvas}` : undefined"
+      // :aria-controls="action.offcanvas"
 .header-action-area {
   display: flex;
   align-items: center;

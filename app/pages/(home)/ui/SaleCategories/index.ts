@@ -1,0 +1,1 @@
+export {default as SaleCategories} from './SaleCategories.vue'

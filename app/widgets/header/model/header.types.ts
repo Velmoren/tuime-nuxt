@@ -21,4 +21,5 @@ export interface Action {
   to?: string
   count?: number
   offcanvas?: string
+  label?: string
 }

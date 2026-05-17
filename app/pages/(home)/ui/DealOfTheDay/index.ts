@@ -1,0 +1,1 @@
+export {default as DealOfTheDay} from './DealOfTheDay.vue'

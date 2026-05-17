@@ -1,0 +1,1 @@
+export {default as ProductFilterTabs} from './ui/ProductFilterTabs.vue'

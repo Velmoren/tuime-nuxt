@@ -1,7 +1,10 @@
 @use "bootstrap/scss/bootstrap";
 
-@use "./rfs" as *;
-@use "./typography";
+@use "./common/rfs" as *;
+@use "./common/typography";
 
-@use "./fa-font";
-@use "./pe-font";
+@use "./common/fa-font";
+@use "./common/pe-font";
+
+@use "./components/common";
+@use "./components/section-title";
