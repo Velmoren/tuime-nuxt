@@ -1,4 +1,14 @@
-<!-- app/app/app.vue -->
+<script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} | Tumie` : 'Tumie — Интернет-магазин'
+  },
+})
+</script>
+
 <template>
   <NuxtLayout>
     <NuxtPage />
@@ -6,11 +16,5 @@
 </template>
 
 <style lang="scss">
-// @use "bootstrap/dist/css/bootstrap.min.css";
-// Наш единственный глобальный импорт стилей из слоя Shared
-@use "~/shared/assets/styles/main.scss";
-
-body {
-  background-color: red;
-}
+@use '~/shared/assets/styles/main.scss';
 </style>

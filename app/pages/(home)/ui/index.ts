@@ -1,0 +1,8 @@
+export { BannerSlider } from './BannerSlider'
+export { TrendingCategories } from './TrendingCategories'
+export { SaleCategories } from './SaleCategories'
+export { BestProduct } from './BestProduct'
+export { BestDealOffer } from './BestDealOffer'
+export { DealOfTheDay } from './DealOfTheDay'
+export { BestPetFood } from './BestPetFood'
+export { LatestBlog } from './LatestBlog'

@@ -75,35 +75,40 @@ export const useHeaderStore = defineStore('widget/header', () => {
         { title: 'Page Not Found', to: '/404' }
       ]
     },
-    { title: 'Contact', to: '/contact' }
+    { title: 'Contact', to: '/contacts' }
   ])
 
   const actionsConfig = ref<Action[]>([
     {
       name: 'search',
       icon: 'pe-7s-search',
-      offcanvas: 'AsideOffcanvasSearch'
+      offcanvas: 'AsideOffcanvasSearch',
+      label: 'Открыть поиск'
     },
     {
       name: 'account',
       icon: 'pe-7s-users',
-      to: '/account-login'
+      to: '/account-login',
+      label: 'Войти в аккаунт'
     },
     {
       name: 'wishlist',
       icon: 'pe-7s-like',
-      to: '/shop-wishlist'
+      to: '/shop-wishlist',
+      label: 'Войти в избранное'
     },
     {
       name: 'cart',
       icon: 'pe-7s-shopbag',
       count: 2,
-      offcanvas: 'AsideOffcanvasCart'
+      offcanvas: 'AsideOffcanvasCart',
+      label: 'Войти в корзину'
     },
     {
       name: 'menu',
       icon: 'pe-7s-menu',
-      offcanvas: 'AsideOffcanvasMenu'
+      offcanvas: 'AsideOffcanvasMenu',
+      label: 'Войти в меню'
     }
   ])
 

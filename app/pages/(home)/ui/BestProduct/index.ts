@@ -1,0 +1,1 @@
+export {default as BestProduct} from './BestProduct.vue'

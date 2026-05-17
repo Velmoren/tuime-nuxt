@@ -1,0 +1,1 @@
+export {default as TrendingCategories} from './TrendingCategories.vue'
